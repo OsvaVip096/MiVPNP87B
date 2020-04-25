@@ -144,6 +144,7 @@ public class ToyVpnService extends VpnService implements Handler.Callback {
         final String NOTIFICATION_CHANNEL_ID = "ToyVpn";
         NotificationManager mNotificationManager = (NotificationManager) getSystemService(
                 NOTIFICATION_SERVICE);
+        assert mNotificationManager != null;
         mNotificationManager.createNotificationChannel(new NotificationChannel(
                 NOTIFICATION_CHANNEL_ID, NOTIFICATION_CHANNEL_ID,
                 NotificationManager.IMPORTANCE_DEFAULT));

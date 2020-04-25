@@ -85,7 +85,7 @@ public class ToyVpnClient extends Activity {
                     .putInt(Prefs.PROXY_PORT, proxyPortNum)
                     .putBoolean(Prefs.ALLOW, allowed.isChecked())
                     .putStringSet(Prefs.PACKAGES, packageSet)
-                    .commit();
+                    .apply();
             Intent intent = VpnService.prepare(ToyVpnClient.this);
             if (intent != null) {
                 startActivityForResult(intent, 0);
